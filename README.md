@@ -1,8 +1,27 @@
-# React + Vite
+# React + Vite 專案啟動指南
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這個專案使用了 React 和 Vite。
 
-Currently, two official plugins are available:
+## 前置要求
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+在開始之前，請確保你的開發環境中已經安裝了 Node.js。你可以通過運行 `node -v` 在終端機中檢查 Node.js 是否已安裝。
+
+## 安裝
+
+首先，克隆這個倉庫到你的本地機器，然後進入該目錄：
+
+git clone <https://github.com/SHiuN26/react-app.git>
+cd <專案目錄>
+
+安裝專案依賴：
+
+npm install
+開發模式
+要在開發模式下運行這個專案，請運行以下命令：
+
+npm run dev
+
+---
+
+!!! question1 試題回覆: answer 資料夾內
+!!! question2 試題回覆: components 資料夾內
