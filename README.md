@@ -13,15 +13,18 @@
 git clone <https://github.com/SHiuN26/react-app.git>
 cd <專案目錄>
 
-安裝專案依賴：
+## 安裝專案依賴：
 
+請於專案內終端機運行以下命令:
 npm install
-開發模式
-要在開發模式下運行這個專案，請運行以下命令：
+
+## 運行開發模式 :
+
+要在開發模式下運行這個專案，請於專案內終端機運行以下命令：
 
 npm run dev
 
----
+## 試題回覆
 
 !!! question1 試題回覆: answer 資料夾內
 !!! question2 試題回覆: components 資料夾內
