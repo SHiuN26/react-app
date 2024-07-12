@@ -1,0 +1,35 @@
+/*
+
+this.setState({ count: this.state.count + 1 }) 拿到的是目前狀態的this.state.count的值，也就是0，
+又因為react是採取批次更新狀態的方式，在執行this.setState({ count: this.state.count + 1 })時，
+三個this.setState({ count: this.state.count + 1 })，都適用0去加1，所以結果是1，而不是3。
+改成這樣
+this.setState((prevState) => ({ count: prevState.count += 1 }));
+可以確保每次都是拿到最新的狀態，這樣就可以確保每次都是在上一次狀態的基礎上加1。
+結果就會是3
+*/
+
+-----------------------------------------------------------------------------
+
+import React from "react";
+class Count extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+    this.handleAddCount = this.handleAddCount.bind(this);
+  }
+  handleAddCount() {
+    this.setState((preState) => ({ count: preState.count + 1 }));
+    this.setState((preState) => ({ count: preState.count + 1 }));
+    this.setState((preState) => ({ count: preState.count + 1 }));
+  }
+  render() {
+    return (
+      <div>
+        <h2>{this.state.count}</h2>
+        <button onClick={this.handleAddCount}>Add</button>
+      </div>
+    );
+  }
+}
+export default Count;

@@ -1,0 +1,44 @@
+/** Can you explain about Interface and Enum, and where will you be using,
+please make some examples. **/
+-----------------------------------------------------------------------------
+/*
+enum通常用來定義一組常數，這些常數通常是相關的，例如方向、顏色。
+*/
+
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+-----------------------------------------------------------------------------
+/*
+介面Person定義了一個物件的結構，這個物件必須包含firstName、lastName、age、deriction這四個屬性。
+*/
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+  deriction: Direction;
+}
+
+const persons: Person[] = [
+  {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    deriction: Direction.Up,
+  },
+  {
+    firstName: "Jane",
+    lastName: "Doe",
+    age: 30,
+    deriction: Direction.Down,
+  },
+  {
+    firstName: "Jack",
+    lastName: "Doe",
+    age: 40,
+    deriction: Direction.Left,
+  },
+];

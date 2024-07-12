@@ -1,0 +1,71 @@
+2.
+/** HTML
+<div class="container">
+<div class="header">5/8 外出確認表</div>
+<div class="content">
+<ol class="shop-list">
+<li class="item">麵包</li>
+<li class="item">短袖衣服</li>
+<li class="item">飲用水</li>
+<li class="item">帳篷</li>
+</ol>
+<ul class="shop-list">
+<li class="item">暈車藥</li>
+<li class="item">感冒藥</li>
+<li class="item">丹木斯</li>
+<li class="item">咳嗽糖漿</li>
+</ul>
+</div>
+<div class="footer">以上僅共參考</div>
+</div>
+**/
+/** CSS
+.container {
+font-size: 14px;
+}
+.container .header {
+font-size: 18px;
+}
+.container .shop-list {
+list-style: none;
+margin-left: -15px;
+}
+.container .shop-list li.item {
+color: green;
+}
+.container .shop-list .item {
+ color: blue;
+ }
+
+ -----------------------------------------------------------------------------
+/* Explain why does this color not works, and how to fix make it work on
+1st list */
+
+ .container .shop-list li.item {
+     color: green;
+   }
+
+   .container .shop-list .item {
+     color: blue;
+   }
+
+/*上述  .container .shop-list .item 的權重比.container .shop-list li.item 少了l i 的權重 所以不生效*/
+
+ -----------------------------------------------------------------------------
+
+ /* Write styling make every other line give background color to next one */
+ **/
+ 
+.container .shop-list li:nth-child(odd) {
+     background-color: pink;
+   }
+奇數行變粉紅色
+
+
+ .container .shop-list li:nth-child(even) {
+     background-color: pink;
+   }
+偶數行變粉紅色
+
+
+擇一即可

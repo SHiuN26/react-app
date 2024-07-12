@@ -1,0 +1,27 @@
+/** Please write the sample code to debounce handleOnChange (Do not use
+any 3th party libs other than react) **/
+
+-----------------------------------------------------------------------------
+
+// 防抖函數
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    const context = this;
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      func.apply(context, args);
+    }, delay);
+  };
+}
+
+// 處理輸入變化的函數
+function handleOnChange(event) {
+  const value = event.target.value;
+  // 在這裡進行 AJAX 請求或其他操作
+  console.log("Making AJAX call with search term:", value);
+}
+
+// 將防抖函數應用到輸入事件上
+const debouncedHandleOnChange = debounce(handleOnChange, 300);

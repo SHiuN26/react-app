@@ -1,0 +1,68 @@
+/**
+There is an array, each item has such format:
+{firstName: 'xxx', lastName: 'xxx', customerID: 'xxx', note: 'xxx',
+profession: ‘xxx’}
+lastName, note can be empty, customerID can only be a set of digital
+numbers.
+profession can only have ‘student’, ‘freelancer’, ‘productOwner’,
+‘engineer’ or ‘systemAnalytics’.
+**/
+/**
+Q1. Please follow the principle (‘firstName’ + ‘lastName’ + ‘customerID’)
+to sort this array and print it out.
+**/
+ -----------------------------------------------------------------------------
+const sampleData = [
+  {
+    firstName: "John",
+    lastName: "Doe",
+    customerID: 123456,
+    note: "",
+    profession: "student",
+  },
+  {
+    firstName: "Jane",
+    lastName: "",
+    customerID: 654321,
+    note: "Interested in software engineering.",
+    profession: "engineer",
+  },
+  {
+    firstName: "Alice",
+    lastName: "Smith",
+    customerID: 112233,
+    note: "",
+    profession: "freelancer",
+  },
+  {
+    firstName: "Bob",
+    lastName: "Brown",
+    customerID: 445566,
+    note: "Has experience in project management.",
+    profession: "productOwner",
+  },
+  {
+    firstName: "Charlie",
+    lastName: "Davis",
+    customerID: 778899,
+    note: "Looking for a system analyst position.",
+    profession: "systemAnalytics",
+  },
+];
+
+const sortUserName = () => {
+  sampleData.sort((a, b) => {
+    // Compare firstName
+    if (a.firstName < b.firstName) return -1;
+    if (a.firstName > b.firstName) return 1;
+
+    // Compare lastName if firstNames are equal
+    if (a.lastName < b.lastName) return -1;
+    if (a.lastName > b.lastName) return 1;
+
+    // Compare customerID if firstName and lastName are equal
+    return a.customerID - b.customerID;
+  });
+  console.log(sampleData);
+  return sampleData;
+};

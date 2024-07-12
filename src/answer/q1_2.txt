@@ -1,0 +1,25 @@
+ Q2. Please sort by ‘profession’ to follow the principle.
+ (‘systemAnalytics’ > ‘engineer’ > ‘productOwner’ > ‘freelancer’ >
+ ‘student’’)
+ **/
+ function sortByType(user) {
+ }
+
+ -----------------------------------------------------------------------------
+
+const sortProfession = () => {
+  // systemAnalytics’ > ‘engineer’ > ‘productOwner’ > ‘freelancer’ > ‘student
+  const professionScore = {
+    systemAnalytics: 5,
+    engineer: 4,
+    productOwner: 3,
+    freelancer: 2,
+    student: 1,
+  };
+
+  sampleData.sort((a, b) => {
+    return professionScore[b.profession] - professionScore[a.profession];
+  });
+  console.log(sampleData);
+  return sampleData;
+};
